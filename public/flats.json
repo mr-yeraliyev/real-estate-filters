@@ -10,63 +10,133 @@
     "id": 2,
     "area": 67,
     "rooms": 3,
-    "address": "Алматы, проспект Абая 45",
+    "address": "Астана, проспект Абая 45",
     "image": "https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 3,
     "area": 42,
     "rooms": 1,
-    "address": "Шымкент, улица Байтурсынова 8",
+    "address": "Астана, улица Байтурсынова 8",
     "image": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 4,
     "area": 80,
     "rooms": 4,
-    "address": "Караганда, улица Ермекова 22",
+    "address": "Астана, улица Ермекова 22",
     "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 5,
     "area": 60,
     "rooms": 2,
-    "address": "Актобе, проспект Мира 10",
+    "address": "Астана, проспект Мира 10",
     "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 6,
     "area": 75,
     "rooms": 3,
-    "address": "Павлодар, улица Ломова 5",
+    "address": "Астана, улица Ломова 5",
     "image": "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 7,
     "area": 50,
     "rooms": 2,
-    "address": "Костанай, улица Алтынсарина 14",
+    "address": "Астана, улица Алтынсарина 14",
     "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 8,
     "area": 90,
     "rooms": 4,
-    "address": "Тараз, улица Толе би 7",
+    "address": "Астана, улица Толе би 7",
     "image": "https://images.unsplash.com/photo-1467987506553-8f3916508521?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 9,
     "area": 65,
     "rooms": 3,
-    "address": "Усть-Каменогорск, улица Казахстан 19",
+    "address": "Астана, улица Казахстан 19",
     "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 10,
     "area": 58,
     "rooms": 2,
-    "address": "Семей, улица Абая 3",
+    "address": "Астана, улица Абая 3",
     "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 11,
+    "area": 72,
+    "rooms": 3,
+    "address": "Астана, улица Кенесары 15",
+    "image": "https://images.unsplash.com/photo-1465101178521-c1a9136a3fd9?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 12,
+    "area": 48,
+    "rooms": 1,
+    "address": "Астана, проспект Республики 21",
+    "image": "https://images.unsplash.com/photo-1467980409851-cfd552e3f829?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 13,
+    "area": 85,
+    "rooms": 4,
+    "address": "Астана, улица Пушкина 9",
+    "image": "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 14,
+    "area": 55,
+    "rooms": 2,
+    "address": "Астана, улица Жамбыла 18",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 15,
+    "area": 63,
+    "rooms": 3,
+    "address": "Астана, проспект Тауелсиздик 30",
+    "image": "https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 16,
+    "area": 78,
+    "rooms": 4,
+    "address": "Астана, улица Сатпаева 11",
+    "image": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 17,
+    "area": 52,
+    "rooms": 2,
+    "address": "Астана, улица Айтматова 6",
+    "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 18,
+    "area": 69,
+    "rooms": 3,
+    "address": "Астана, проспект Женис 27",
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 19,
+    "area": 61,
+    "rooms": 2,
+    "address": "Астана, улица Валиханова 13",
+    "image": "https://images.unsplash.com/photo-1472224371017-08207f84aaae?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 20,
+    "area": 74,
+    "rooms": 3,
+    "address": "Астана, улица Кунаева 4",
+    "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=400&q=80"
   }
 ]
