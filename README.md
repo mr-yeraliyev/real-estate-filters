@@ -1,10 +1,12 @@
 # real-estate-filters
 
-This template should help get you started developing with Vue 3 in Vite.
+# Фильтр квартир в Астане
 
-## Recommended IDE Setup
+Фильтрация недвижимости по:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Площади
+- Кол-ву комнат
+- Адресу
 
 ## Type Support for `.vue` Imports in TS
 
