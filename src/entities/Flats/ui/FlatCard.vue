@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Flat } from '@/model'
+import type { Flat } from '../model'
 
 defineProps<{
   flat: Flat

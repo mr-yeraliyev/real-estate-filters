@@ -1,18 +1,18 @@
 <template>
-  <a-form layout="vertical">
-    <a-form-item label="Площадь (м²)">
+  <a-form id="flat-filter-form" layout="vertical">
+    <a-form-item name="areaRange" label="Площадь (м²)">
       <a-slider range :min="20" :max="150" v-model:value="areaRange" />
     </a-form-item>
 
-    <a-form-item label="Комнаты">
+    <a-form-item name="roomRange" label="Комнаты">
       <a-slider range :min="1" :max="5" v-model:value="roomRange" />
     </a-form-item>
 
-    <a-form-item label="Адрес">
+    <a-form-item name="addressQuery" label="Адрес">
       <a-input v-model:value="addressQuery" placeholder="Введите адрес" />
     </a-form-item>
 
-    <a-button type="primary" block @click="emitFilters">Применить фильтры</a-button>
+    <a-button type="primary" size="large" block @click="emitFilters"> Применить фильтры </a-button>
   </a-form>
 </template>
 

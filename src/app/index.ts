@@ -1,0 +1,1 @@
+export { antdThemeConfig } from './antdThemeConfig'

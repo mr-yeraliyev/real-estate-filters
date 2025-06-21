@@ -1,17 +1,17 @@
 <template>
   <a-layout style="min-height: 100vh">
-    <a-layout-header class="header">
-      <div class="header-content">
+    <a-layout-header class="flats-list__header">
+      <div class="flats-list__header-content">
         <a-button
           type="text"
           shape="circle"
-          class="burger-btn"
+          class="flats-list__burger-btn"
           @click="drawerVisible = true"
           v-show="isMobile"
         >
           ☰
         </a-button>
-        <div class="header-title">Поиск квартир в Астане</div>
+        <div class="flats-list__header-title">Поиск квартир в Астане</div>
       </div>
     </a-layout-header>
 
@@ -19,9 +19,9 @@
       <a-row :gutter="[16, 16]">
         <!-- Desktop filters -->
         <a-col :xs="0" :md="6">
-          <div class="sticky-filters">
+          <div class="flats-list__sticky-filters">
             <a-card>
-              <Filters @update:filters="onFilterChange" />
+              <FlatFilters @update:filters="onFilterChange" />
             </a-card>
           </div>
         </a-col>
@@ -38,29 +38,36 @@
       </a-row>
 
       <!-- Drawer for mobile filters -->
-      <a-drawer v-model:open="drawerVisible" placement="left" title="Фильтры" :width="300">
-        <Filters @update:filters="onFilterChange" />
+      <a-drawer
+        v-model:open="drawerVisible"
+        placement="bottom"
+        title="Фильтры"
+        height="max-content"
+        class="flats-list__drawer"
+      >
+        <FlatFilters @update:filters="onFilterChange" />
       </a-drawer>
     </a-layout-content>
   </a-layout>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import Filters from '@/components/FlatFilters.vue'
-import FlatCard from '@/components/FlatCard.vue'
-import type { Flat } from '@/model'
+import { ref, onMounted } from 'vue'
+import { FlatCard, FlatFilters, type Flat } from '@/entities/Flats'
+import type { FilterValues } from '../model'
+import { useMobile } from '../composables'
+import { filterFlats } from '../lib'
 
 const flats = ref<Flat[]>([])
 const filteredFlats = ref<Flat[]>([])
 
-const filters = ref({
+const filters = ref<FilterValues>({
   areaRange: [20, 150],
   roomRange: [1, 5],
   addressQuery: '',
 })
 const drawerVisible = ref(false)
-const isMobile = ref(false)
+const { isMobile } = useMobile()
 
 const onFilterChange = (newFilters: typeof filters.value) => {
   filters.value = newFilters
@@ -70,31 +77,14 @@ const onFilterChange = (newFilters: typeof filters.value) => {
 }
 
 const applyFilters = () => {
-  filteredFlats.value = flats.value.filter((flat) => {
-    return (
-      flat.area >= filters.value.areaRange[0] &&
-      flat.area <= filters.value.areaRange[1] &&
-      flat.rooms >= filters.value.roomRange[0] &&
-      flat.rooms <= filters.value.roomRange[1] &&
-      flat.address.toLowerCase().includes(filters.value.addressQuery)
-    )
-  })
+  filteredFlats.value = filterFlats(flats.value, filters.value)
 }
-// Watch for screen size
-const checkMobile = () => {
-  isMobile.value = window.innerWidth < 768
-}
+
 onMounted(async () => {
   const res = await fetch('/flats.json')
   flats.value = await res.json()
   applyFilters()
-  checkMobile()
-  window.addEventListener('resize', checkMobile)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('resize', checkMobile)
 })
 </script>
 
-<style src="../styles/flats-list.css" scoped />
+<style lang="scss" src="../styles/flats-list.scss" />
